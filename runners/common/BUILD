@@ -4,7 +4,7 @@ annex_scala_runner_toolchain(
     name = "toolchain_implementation",
     runner = select({
         ":config_use_bloop": "//runners/bloop:runner",
-        "//conditions:default": "//runners/zinc:runner",
+        "//conditions:default": "//runners/bloop:runner",
     }),
     visibility = ["//visibility:public"],
 )
